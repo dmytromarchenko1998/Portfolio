@@ -114,6 +114,7 @@ button, input[type="submit"], input[type="reset"] {
 /*----------Variables----------*/
 :root {
   --nav-transparancy: 1;
+  --sectionHeaderSize: 2em;
 }
 
 /*----------Main----------*/
@@ -135,12 +136,12 @@ body {
 }
 
 .layer {
-  filter: blur(.04em);
   position: absolute;
   z-index: 2;
 }
 
 .blur {
+  filter: blur(.04em);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,7 +158,7 @@ body {
 .section-header {
   color: white;
   text-align: center;
-  font-size: 2em;
+  font-size: var(--sectionHeaderSize);
 }
 
 /*----------NavBar----------*/
@@ -182,7 +183,7 @@ body {
   justify-content: center;
 }
 
-.nav:hover {
+.nav:focus {
   transition: all .3s;
   background-color: rgba(50, 50, 50,1);
 }
@@ -427,7 +428,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.hover:hover {
+.hover:focus {
   opacity: 0;
 }
 
@@ -504,7 +505,7 @@ body {
   z-index: 1000;
 }
 
-.copyIcon.link:hover {
+.copyIcon.link:focus {
   opacity: .7;
 }
 
@@ -557,6 +558,10 @@ body {
   font-size: 2em;
   color: white;
   z-index: 99;
+}
+
+.project.cover.mobile>h4 {
+  font-size: 4em;
 }
 
 #foodees>.blur {

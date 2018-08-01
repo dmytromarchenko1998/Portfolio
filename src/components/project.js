@@ -9,10 +9,9 @@ const project = ({ projectData, toggle, unToggle, selected, type, format }) => {
   if (projectData.id === selected) {
     if (type === 'hover') {
       return (
-        <div id={projectData.id} onPointerLeave={() => {unToggle(projectData.id, 'hover')}} onPointerEnter={() => {toggle(projectData.id, 'hover')}} onClick={() => {toggle(projectData.id, 'click')}} className={`project viewmore ${format}`}>
-          <div>
-            <div><h4>View More</h4></div>
-          </div>
+        <div id={projectData.id} onPointerLeave={() => {unToggle(projectData.id, 'hover')}} onPointerEnter={() => {toggle(projectData.id, 'hover')}} onClick={() => {toggle(projectData.id, 'click')}} className={`project cover ${format}`}>
+          <div className="layer"><div className="gradient layer"></div></div>
+          <h4>View More</h4>
         </div>
       )
     } else if (type === 'click'){
@@ -27,7 +26,7 @@ const project = ({ projectData, toggle, unToggle, selected, type, format }) => {
   } else {
     return (
       <div id={projectData.id} onPointerEnter={() => {toggle(projectData.id, 'hover')}} onClick={() => {toggle(projectData.id, 'click')}} className={`project cover ${format}`}>
-      <div className="blur layer"><div className="gradient layer"></div></div>
+        <div className="blur layer"><div className="gradient layer"></div></div>
         <h4>{projectName}</h4>
       </div>
     )

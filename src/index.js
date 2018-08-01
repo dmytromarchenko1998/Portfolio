@@ -27,6 +27,9 @@ class App extends Component {
     let format = '';
     if (window.screen.availHeight > window.screen.availWidth) {
       format = 'mobile';
+      document.documentElement.style.setProperty(`--sectionHeaderSize`, '4em');
+    } else {
+      document.documentElement.style.setProperty(`--sectionHeaderSize`, '2em');
     }
     this.setState({format:format});
   }
