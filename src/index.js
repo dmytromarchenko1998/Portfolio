@@ -10,16 +10,35 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      format: '',
+    }
+    this.resize = this.resize.bind(this);
+  }
+
+  componentDidMount() {
+    window.onresize = () => {
+      this.resize();
+    };
+    this.resize();
+  }
+
+  resize() {
+    let format = '';
+    if (window.screen.availHeight > window.screen.availWidth) {
+      format = 'mobile';
+    }
+    this.setState({format:format});
   }
 
   render() {
     return (
       <div>
-        <NavBar />
-        <Cover />
-        <ProjectsList />
-        <Technologies />
-        <About />
+        <NavBar format={this.state.format}/>
+        <Cover format={this.state.format}/>
+        <ProjectsList format={this.state.format}/>
+        <Technologies format={this.state.format}/>
+        <About format={this.state.format}/>
       </div>
     )
   }

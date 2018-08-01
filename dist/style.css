@@ -540,10 +540,15 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1em;
-  width: 40em;
-  height: 40em;
+  width: 20em;
+  height: 20em;
   background-color: rgba(25, 24, 26, .95);
   margin-bottom: 4em;
+}
+
+.project.mobile {
+  width: 40em;
+  height: 40em;
 }
 
 .project.cover>h4 {
@@ -594,6 +599,11 @@ body {
 .project>.blur>.gradient, .project>.blur {
   position: absolute;
   z-index: 1;
+  width: 20em;
+  height: 20em;
+}
+
+.project.mobile>.blur>.gradient, .project.mobile>.blur {
   width: 40em;
   height: 40em;
 }
