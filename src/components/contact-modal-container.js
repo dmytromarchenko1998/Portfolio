@@ -11,7 +11,7 @@ const ContactModalContainer = ({ selected, toggle }) => {
     );
   } else if (selected === 'linkedin') {
     return (
-      <div onMouseLeave={() => {toggle('none')}} onMouseEnter={() => {toggle('linkedin')}} className="modal-container">
+      <div onPointerLeave={() => {toggle('none')}} onPointerEnter={() => {toggle('linkedin')}} className="modal-container">
         <div id="linkedin" className="link-modal">
           <div className="line">
             <h2>Link:</h2>
@@ -23,7 +23,7 @@ const ContactModalContainer = ({ selected, toggle }) => {
     )
   } else if (selected === 'github') {
     return (
-      <div onMouseLeave={() => {toggle('none')}} onMouseEnter={() => {toggle('github')}} className="modal-container">
+      <div onPointerLeave={() => {toggle('none')}} onPointerEnter={() => {toggle('github')}} className="modal-container">
         <div id="github" className="link-modal">
           <div className="line">
             <h2>Username: </h2>
@@ -40,7 +40,7 @@ const ContactModalContainer = ({ selected, toggle }) => {
     )
   } else if (selected === 'mail') {
     return (
-      <div onMouseLeave={() => {toggle('none')}} onMouseEnter={() => {toggle('mail')}} className="modal-container">
+      <div onPointerLeave={() => {toggle('none')}} onPointerEnter={() => {toggle('mail')}} className="modal-container">
         <div id="mail" className="link-modal">
           <div className="line">
             <h2>Email: </h2>
@@ -52,7 +52,7 @@ const ContactModalContainer = ({ selected, toggle }) => {
     )
   } else if (selected === 'phone') {
     return (
-      <div onMouseLeave={() => {toggle('none')}} onMouseEnter={() => {toggle('phone')}} className="modal-container">
+      <div onPointerLeave={() => {toggle('none')}} onPointerEnter={() => {toggle('phone')}} className="modal-container">
         <div id="phone" className="link-modal">
           <div className="line">
             <h2>Mobile: </h2>
