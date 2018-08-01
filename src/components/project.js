@@ -15,7 +15,7 @@ const project = ({ projectData, toggle, unToggle, selected, type, format }) => {
           </div>
         </div>
       )
-    } else {
+    } else if (type === 'click'){
       return (
         <div id={projectData.id} onMouseLeave={() => {unToggle(projectData.id, 'hover')}} onMouseEnter={() => {toggle(projectData.id, 'hover')}} onClick={() => {toggle(projectData.id, 'click')}} className={`project ${format}`}>
           <div>
