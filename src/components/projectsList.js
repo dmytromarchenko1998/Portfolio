@@ -16,11 +16,11 @@ class projectsList extends React.Component {
   }
 
   toggle(project, type) {
-    // if ((this.state.selected === project) && (this.state.type === 'click')) {
-    //   this.setState({selected:'none', type: type});
-    // } else {
+    if ((this.state.selected === project) && (this.state.type === 'click')) {
+      this.setState({selected:'none', type: type});
+    } else {
       this.setState({selected:project, type: type})
-    // }
+    }
   }
 
   unToggle(project, type) {
