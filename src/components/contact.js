@@ -38,16 +38,16 @@ class contact extends React.Component  {
           <div className="me"></div>
           <ContactModalContainer toggle={this.toggle} selected={this.state.selected}/>
           <div className="contact-info">
-            <a link="https://www.linkedin.com/in/dmytro-marchenko/" target="_blank" onClick={() => {this.toggle('linkedin', 'click')}}onMouseLeave={() => {this.unToggle('hover')}} onMouseEnter={() => {this.toggle('linkedin')}} className="linkedin link">
+            <a link="https://www.linkedin.com/in/dmytro-marchenko/" target="_blank" onClick={() => {this.toggle('linkedin', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('linkedin')}} className="linkedin link">
               <div className="linkedin hover"></div>
             </a>
-            <a link="https://github.com/dmytromarchenko1998" target="_blank" onClick={() => {this.toggle('github', 'click')}}onMouseLeave={() => {this.unToggle('hover')}} onMouseEnter={() => {this.toggle('github')}} className="github link">
+            <a link="https://github.com/dmytromarchenko1998" target="_blank" onClick={() => {this.toggle('github', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('github')}} className="github link">
               <div className="github hover"></div>
             </a>
-            <a link="mailto:dmytromarchenko1998@gmail.com" onClick={() => {this.toggle('mail', 'click')}}onMouseLeave={() => {this.unToggle('hover')}} onMouseEnter={() => {this.toggle('mail', 'hover')}} className="mail link">
+            <a link="mailto:dmytromarchenko1998@gmail.com" onClick={() => {this.toggle('mail', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('mail', 'hover')}} className="mail link">
               <div className="mail hover"></div>
             </a>
-            <a link="tel:925-457-1925" onClick={() => {this.toggle('phone', 'click')}}onMouseLeave={() => {this.unToggle('hover')}} onMouseEnter={() => {this.toggle('phone')}} className="phone link">
+            <a link="tel:925-457-1925" onClick={() => {this.toggle('phone', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('phone')}} className="phone link">
               <div className="phone  hover"></div>
             </a>
           </div>
