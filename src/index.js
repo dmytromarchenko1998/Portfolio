@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Cover from './components/cover';
 import NavBar from './components/navbar';
 import About from './components/about';
-import Projects from './components/projects';
+import ProjectsList from './components/projectsList';
 import Technologies from './components/technologies';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Cover />
-        <Projects />
+        <ProjectsList />
         <Technologies />
         <About />
       </div>
