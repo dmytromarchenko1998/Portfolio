@@ -9,7 +9,7 @@ class projectsList extends React.Component {
     super(props);
     this.state = {
       selected: 'none',
-      type: 'none'
+      type: 'click'
     }
     this.toggle = this.toggle.bind(this);
     this.unToggle = this.unToggle.bind(this);
