@@ -1,7 +1,7 @@
 import React from 'react';
 import Contact from './contact';
 
-const about = props => (
+const about = ({ format }) => (
   <section id="about">
     <div className="about-container">
       <h1 className="section-header">About Me</h1>
@@ -18,7 +18,7 @@ const about = props => (
           My passion lies in creating and building new applications from the ground up. Please feel free to contact me at 925-457-1925. I love meeting new people and I can't wait to start coding!
         </p>
       </div>
-      <Contact />
+      <Contact format={format}/>
     </div>
   </section>
 );

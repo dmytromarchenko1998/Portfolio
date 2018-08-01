@@ -114,7 +114,16 @@ button, input[type="submit"], input[type="reset"] {
 /*----------Variables----------*/
 :root {
   --nav-transparancy: 1;
-  --sectionHeaderSize: 2em;
+  --section-header-size: 2em;
+  --link-modal-font: 1em;
+  --project-size: 20em;
+  --link-size: 4em;
+  --me-size: 10em;
+  --copy-icon-padding: 1.5em;
+  --linkedin: url(linkedin.png);
+  --github: url(github.png);
+  --mail: url('mail.png');
+  --phone: url('phone.png');
 }
 
 /*----------Main----------*/
@@ -153,12 +162,21 @@ body {
   border: .04em solid rgba(25, 24, 26, 1);
 }
 
+/*----------Preload----------*/
+
+#preload {
+  background: url(phone-hover.png) no-repeat -9999px -9999px,
+    url(github-hover.png) no-repeat -9999px -9999px,
+    url(mail-hover.png) no-repeat -9999px -9999px,
+    url(phone-hover.png) no-repeat -9999px -9999px,
+}
+
 /*----------Section Header----------*/
 
 .section-header {
   color: white;
   text-align: center;
-  font-size: var(--sectionHeaderSize);
+  font-size: var(--section-header-size);
 }
 
 /*----------NavBar----------*/
@@ -332,8 +350,8 @@ body {
 }
 
 .me {
-  width: 10em;
-  height: 10em;
+  width: var(--me-size);
+  height: var(--me-size);
   background: url(me.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -366,8 +384,8 @@ body {
 
 .link{
   margin: 1em;
-  width: 4em;
-  height: 4em;
+  width: var(--link-size);
+  height: var(--link-size);
   background-size: contain;
 }
 
@@ -375,61 +393,28 @@ body {
   display: flex;
 }
 
-.link>.hover {
-  width: 100%;
-  height: 100%;
-}
-
 .linkedin.link {
-  background: url(linkedin.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.linkedin.hover {
-  background: url(linkedin-hover.png);
+  background-image: var(--linkedin);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .github.link {
-  background: url(github.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.github.hover {
-  background: url(github-hover.png);
+  background-image: var(--github);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .mail.link {
-  background: url(mail.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.mail.hover{
-  background: url(mail-hover.png);
+  background-image: var(--mail);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .phone.link {
-  background: url(phone.png);
+  background-image: var(--phone);
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.phone.hover {
-  background: url(phone-hover.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.hover:focus {
-  opacity: 0;
 }
 
 /*----------Link-Modal----------*/
@@ -462,12 +447,12 @@ body {
 
 .line>h2 {
   padding-right: .2em;
-  font-size: 1em;
+  font-size: var(--link-modal-font);
   font-weight: 800;
 }
 
 .line>a {
-  font-size: 1em;
+  font-size: var(--link-modal-font);
   font-weight: 100;
   text-decoration: none;
   color: rgba(200, 200, 200, 1);
@@ -480,13 +465,13 @@ body {
   flex-grow: 1;
   justify-content: flex-end;
   align-items: center;
-  width: 1.5em;
+  width: var(--copy-icon-padding);
   height: 1em;
 }
 
 .copyIcon {
-  width: 1em;
-  height: 1em;
+  width: var(--link-modal-font);
+  height: var(--link-modal-font);
   margin: 0em;
   padding: 0em;
 }
@@ -541,27 +526,20 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1em;
-  width: 20em;
-  height: 20em;
+  width: var(--project-size);
+  height: var(--project-size);
+  max-width: 80vw;
+  max-height: 80vw;
   background-color: rgba(25, 24, 26, .95);
   margin-bottom: 4em;
-}
-
-.project.mobile {
-  width: 40em;
-  height: 40em;
 }
 
 .project.cover>h4 {
   position: relative;
   text-transform: capitalize;
-  font-size: 2em;
+  font-size: var(--section-header-size);
   color: white;
   z-index: 99;
-}
-
-.project.cover.mobile>h4 {
-  font-size: 4em;
 }
 
 #foodees>.blur {
@@ -604,13 +582,10 @@ body {
 .project>.blur>.gradient, .project>.blur {
   position: absolute;
   z-index: 1;
-  width: 20em;
-  height: 20em;
-}
-
-.project.mobile>.blur>.gradient, .project.mobile>.blur {
-  width: 40em;
-  height: 40em;
+  width: var(--project-size);
+  height: var(--project-size);
+  max-width: 80vw;
+  max-height: 80vw;
 }
 
 /*----------Technologies----------*/

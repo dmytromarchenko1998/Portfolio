@@ -16,16 +16,20 @@ class projectsList extends React.Component {
   }
 
   toggle(project, type) {
-    if ((this.state.selected === project) && (this.state.type === 'click')) {
-      this.setState({selected:'none', type: type});
-    } else {
-      this.setState({selected:project, type: type})
-    }
+    if ((this.props.format === 'desktop') || (type === 'click')) { 
+      if ((this.state.selected === project) && (this.state.type === 'click')) {
+        this.setState({selected:'none', type: type});
+      } else {
+        this.setState({selected:project, type: type})
+      }
+    } 
   }
 
   unToggle(project, type) {
-    if (this.state.type === 'hover') {
-      this.setState({selected:'none', type: type})
+    if (this.props.format === 'desktop') { 
+      if (this.state.type === 'hover') {
+        this.setState({selected:'none', type: type})
+      }
     }
   }
 
@@ -37,7 +41,7 @@ class projectsList extends React.Component {
             <h1 className="section-header">Projects</h1>
           </div>
           <div className="project-list">
-            {projects.map(project => <Project format={this.props.format} type={this.state.type} toggle={this.toggle} unToggle={this.unToggle} selected={this.state.selected} projectData={project}/>)}
+            {projects.map(project => <Project type={this.state.type} toggle={this.toggle} unToggle={this.unToggle} selected={this.state.selected} projectData={project}/>)}
           </div>
         </div>
       </section>

@@ -10,24 +10,35 @@ class contact extends React.Component  {
     }
     this.toggle = this.toggle.bind(this);
     this.unToggle = this.unToggle.bind(this);
+    this.toggleImage = this.toggleImage.bind(this);
   }
 
-  // updateSelected(selected) {
-  //   this.setState({selected:selected})
-  // }
-
-  toggle(project, type) {
-    if ((this.state.selected === project) && (this.state.type === 'click')) {
-      this.setState({selected:'none', type: type});
-    } else {
-      this.setState({selected:project, type: type})
+  toggle(selected, type) {
+    if ((this.props.format === 'desktop') || (type === 'click')) { 
+      if ((this.state.selected === selected) && (type === 'click')) {
+        this.setState({selected:'none', type: type}, this.toggleImage);
+      } else {
+        this.setState({selected:selected, type: type}, this.toggleImage)
+      }
     }
   }
 
-  unToggle(type) {
-    if (this.state.type === 'hover') {
-      this.setState({selected:'none', type: type})
+  unToggle(selected, type) {
+    if (this.props.format === 'desktop') { 
+      this.setState({selected:'none', type: type}, this.toggleImage)
     }
+  }
+
+  toggleImage() {
+    const items = ['linkedin', 'github', 'mail', 'phone']
+    let selected = this.state.selected;
+    items.forEach(item => {
+      if (item === selected){
+        document.documentElement.style.setProperty(`--${item}`, `url(${item}-hover.png)`)
+      } else {
+        document.documentElement.style.setProperty(`--${item}`, `url(${item}.png)`)
+      }
+    })
   }
 
   render() {
@@ -36,20 +47,12 @@ class contact extends React.Component  {
         <div className="contact-container">
           <h1 className="section-header">Contact Me</h1>
           <div className="me"></div>
-          <ContactModalContainer toggle={this.toggle} selected={this.state.selected}/>
+          <ContactModalContainer unToggle={this.unToggle} toggle={this.toggle} selected={this.state.selected}/>
           <div className="contact-info">
-            <a link="https://www.linkedin.com/in/dmytro-marchenko/" target="_blank" onClick={() => {this.toggle('linkedin', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('linkedin')}} className="linkedin link">
-              <div className="linkedin hover"></div>
-            </a>
-            <a link="https://github.com/dmytromarchenko1998" target="_blank" onClick={() => {this.toggle('github', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('github')}} className="github link">
-              <div className="github hover"></div>
-            </a>
-            <a link="mailto:dmytromarchenko1998@gmail.com" onClick={() => {this.toggle('mail', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('mail', 'hover')}} className="mail link">
-              <div className="mail hover"></div>
-            </a>
-            <a link="tel:925-457-1925" onClick={() => {this.toggle('phone', 'click')}}onPointerLeave={() => {this.unToggle('hover')}} onPointerEnter={() => {this.toggle('phone')}} className="phone link">
-              <div className="phone  hover"></div>
-            </a>
+            <div onClick={() => {this.toggle('linkedin', 'click')}} onPointerLeave={() => {this.unToggle('linkedin', 'hover')}} onPointerEnter={() => {this.toggle('linkedin', 'hover')}} className="linkedin link"></div>
+            <div onClick={() => {this.toggle('github', 'click')}} onPointerLeave={() => {this.unToggle('github', 'hover')}} onPointerEnter={() => {this.toggle('github', 'hover')}} className="github link"></div>
+            <div onClick={() => {this.toggle('mail', 'click')}} onPointerLeave={() => {this.unToggle('mail', 'hover')}} onPointerEnter={() => {this.toggle('mail', 'hover')}} className="mail link"></div>
+            <div onClick={() => {this.toggle('phone', 'click')}} onPointerLeave={() => {this.unToggle('phone', 'hover')}} onPointerEnter={() => {this.toggle('phone', 'hover')}} className="phone link"></div>
           </div>
         </div>
       </section>
