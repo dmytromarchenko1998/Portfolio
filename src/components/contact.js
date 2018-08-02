@@ -54,7 +54,7 @@ class contact extends React.Component  {
       <section id="contact">
         <div className="contact-container">
           <h1 className="section-header">Contact Me</h1>
-          <div className="me"></div>
+          <span className="me"></span>
           <ContactModalContainer unToggle={this.unToggle} toggle={this.toggle} selected={this.state.selected}/>
           <ContactLinks unToggle={this.unToggle} toggle={this.toggle} selected={this.state.selected}/>
         </div>

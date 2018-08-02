@@ -438,26 +438,26 @@ div.expanded-nav>.first {
 }
 
 .linkedin.link {
-  background-image: var(--linkedin);
-  background-size: contain;
+  background-image: url(linkedindual.png);
+  background-size: 200%;
   background-repeat: no-repeat;
 }
 
 .github.link {
-  background-image: var(--github);
-  background-size: contain;
+  background-image: url(githubdual.png);
+  background-size: 200%;
   background-repeat: no-repeat;
 }
 
 .mail.link {
-  background-image: var(--mail);
-  background-size: contain;
+  background-image: url(maildual.png);
+  background-size: 200%;
   background-repeat: no-repeat;
 }
 
 .phone.link {
-  background-image: var(--phone);
-  background-size: contain;
+  background-image: url(phonedual.png);
+  background-size: 200%;
   background-repeat: no-repeat;
 }
 
@@ -514,13 +514,21 @@ div.expanded-nav>.first {
 }
 
 .copyIcon {
+  background: url(copydual.png);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: left top;
   width: var(--link-modal-font);
   height: var(--link-modal-font);
   margin: 0em;
   padding: 0em;
 }
 
-.copyIcon.hover {
+div:hover, button:hover, div:active, button:active {
+  background-position: right top;
+}
+
+/*.copyIcon.hover {
   background: url(copy-hover.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -532,11 +540,11 @@ div.expanded-nav>.first {
   background-repeat: no-repeat;
   position: relative;
   z-index: 1000;
-}
+}*/
 
-.copyIcon.link:focus {
+/*.copyIcon.link:focus {
   opacity: .7;
-}
+}*/
 
 /*----------Projects----------*/
 
