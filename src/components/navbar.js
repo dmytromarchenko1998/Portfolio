@@ -1,23 +1,60 @@
-import React from 'react';
+import React, { Component } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
+import ExpandedNav from './expandednav';
 
-const NavBar = (props) => {
-  smoothscroll.polyfill();
-  const scrollTo = (section) => {
+class NavBar extends Component {
+  constructor(props) {
+    super(props)
+    smoothscroll.polyfill();
+    this.state = {
+      expanded: false
+    }
+    this.toggleNav = this.toggleNav.bind(this);
+    this.scrollTo = this.scrollTo.bind(this);
+  }
+
+  scrollTo(section) {
     document.querySelector(section).scrollIntoView({ 
       behavior: 'smooth' 
     });
   }
-  return (
-    <nav className="navbar">
-      <li className="name"><h1>Dmytro</h1><h1>Marchenko</h1></li>
-      <li onClick={() => {scrollTo('#cover')}} className="nav item"><a>Home</a></li>
-      <li onClick={() => {scrollTo('#projects')}} className="nav item"><a>Projects</a></li>
-      <li onClick={() => {scrollTo('#technologies')}} className="nav item"><a>Technologies</a></li>
-      <li onClick={() => {scrollTo('#about')}} className="nav item"><a>About</a></li>
-      <li onClick={() => {scrollTo('#contact')}} className="nav item"><a>Contact Me</a></li>
-    </nav>
-  )
+
+  toggleNav() {
+    if (this.state.expanded === true) {
+      this.setState({expanded:false});
+    } else {
+      this.setState({expanded:true});
+    }
+  }
+
+  render() {
+    if ((this.props.format === 'desktop') && (this.props.size === 'regular')) {
+      return (
+        <nav className="navbar">
+          <li className="name"><h1>Dmytro</h1><h1>Marchenko</h1></li>
+          <li onClick={() => {this.scrollTo('#cover')}} className="nav item"><a>Home</a></li>
+          <li onClick={() => {this.scrollTo('#projects')}} className="nav item"><a>Projects</a></li>
+          <li onClick={() => {this.scrollTo('#technologies')}} className="nav item"><a>Technologies</a></li>
+          <li onClick={() => {this.scrollTo('#about')}} className="nav item"><a>About</a></li>
+          <li onClick={() => {this.scrollTo('#contact')}} className="nav item"><a>Contact Me</a></li>
+        </nav>
+      )
+    } else {
+      return (
+         <nav className="navbar">
+           <li className="name"><h1>Dmytro</h1><h1>Marchenko</h1></li>
+           <li onClick={this.toggleNav} className="nav item">
+             <div className="nav-icon">
+               <span className="nav-line"></span>
+               <span className="nav-line"></span>
+               <span className="nav-line"></span>
+             </div>
+           </li>
+           <ExpandedNav scrollTo={this.scrollTo} expanded={this.state.expanded} toggleNav={this.toggleNav} />
+         </nav>
+      )
+    }
+  }
 }
 
 module.exports = NavBar;
