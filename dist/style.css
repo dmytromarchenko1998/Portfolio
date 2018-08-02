@@ -165,10 +165,7 @@ body {
 /*----------Preload----------*/
 
 #preload {
-  background: url(phone-hover.png) no-repeat -9999px -9999px,
-    url(github-hover.png) no-repeat -9999px -9999px,
-    url(mail-hover.png) no-repeat -9999px -9999px,
-    url(phone-hover.png) no-repeat -9999px -9999px,
+  background: url(phone-hover.png) no-repeat -9999px -9999px, url(github-hover.png) no-repeat -9999px -9999px, url(mail-hover.png) no-repeat -9999px -9999px, url(phone-hover.png) no-repeat -9999px -9999px;
 }
 
 /*----------Section Header----------*/
@@ -399,7 +396,7 @@ div.expanded-nav>.first {
 .me {
   width: var(--me-size);
   height: var(--me-size);
-  background: url(me.png);
+  background: url(me.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -590,7 +587,7 @@ div.expanded-nav>.first {
 }
 
 #foodees>.blur {
-  background: url(foodeesmain.png);
+  background: url(foodeesmain.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -601,7 +598,7 @@ div.expanded-nav>.first {
 }
 
 #zaget>.blur {
-  background: url(zaget.png);
+  background: url(zaget.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -612,7 +609,7 @@ div.expanded-nav>.first {
 }
 
 #gottago>.blur {
-  background: url(gottagomodalhours.png);
+  background: url(gottagomodalhours.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
