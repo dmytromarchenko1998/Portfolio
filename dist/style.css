@@ -120,10 +120,6 @@ button, input[type="submit"], input[type="reset"] {
   --link-size: 4em;
   --me-size: 10em;
   --copy-icon-padding: 1.5em;
-  --linkedin: url(linkedin.png);
-  --github: url(github.png);
-  --mail: url(mail.png);
-  --phone: url(phone.png);
 }
 
 /*----------Main----------*/

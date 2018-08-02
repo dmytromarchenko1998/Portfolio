@@ -11,42 +11,22 @@ class contact extends React.Component  {
     }
     this.toggle = this.toggle.bind(this);
     this.unToggle = this.unToggle.bind(this);
-    this.toggleImage = this.toggleImage.bind(this);
   }
 
   toggle(selected, type) {
     if ((this.props.format === 'desktop') || (type === 'click')) { 
       if ((this.state.selected === selected) && (type === 'click')) {
-        this.setState({selected:'none', type: type}, this.toggleImage);
+        this.setState({selected:'none', type: type});
       } else {
-        this.setState({selected:selected, type: type}, this.toggleImage)
+        this.setState({selected:selected, type: type})
       }
     }
   }
 
   unToggle(selected, type) {
     if (this.props.format === 'desktop') { 
-      this.setState({selected:'none', type: type}, this.toggleImage)
+      this.setState({selected:'none', type: type})
     }
-  }
-
-  toggleImage() {
-    const items = ['linkedin', 'github', 'mail', 'phone']
-    let selected = this.state.selected;
-    items.forEach(item => {
-      let cssVal = window.getComputedStyle(document.documentElement).getPropertyValue(`--${item}`);
-      if (item === selected){
-        if (cssVal.split('hover').length === 1) {
-          console.log('change')
-          document.documentElement.style.setProperty(`--${item}`, `url(${item}-hover.png)`)
-        }
-      } else {
-        if (cssVal.split('hover').length === 2) {
-          console.log('change')
-          document.documentElement.style.setProperty(`--${item}`, `url(${item}.png)`)
-        }
-      }
-    })
   }
 
   render() {
