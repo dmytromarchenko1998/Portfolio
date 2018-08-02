@@ -38,7 +38,7 @@ class App extends Component {
       styleProps[4] = {name:'--me-size', value: '15em'};
       styleProps[5] = {name:'--link-modal-font', value: '2em'};
       styleProps[6] = {name:'--copy-icon-padding', value: '3em'};
-      styleProps[7] = {name:'--technology', value: '3em'};
+      styleProps[7] = {name:'--technology', value: '2em'};
       this.setState({format:'mobile'});
     } else { //desktop sizing
       let size = 'regular';
