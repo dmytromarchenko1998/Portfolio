@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactModalContainer from './contact-modal-container';
+import ContactLinks from './contactlinks';
 
 class contact extends React.Component  {
   constructor(props) {
@@ -36,10 +37,12 @@ class contact extends React.Component  {
       let cssVal = window.getComputedStyle(document.documentElement).getPropertyValue(`--${item}`);
       if (item === selected){
         if (cssVal.split('hover').length === 1) {
+          console.log('change')
           document.documentElement.style.setProperty(`--${item}`, `url(${item}-hover.png)`)
         }
       } else {
         if (cssVal.split('hover').length === 2) {
+          console.log('change')
           document.documentElement.style.setProperty(`--${item}`, `url(${item}.png)`)
         }
       }
@@ -53,12 +56,7 @@ class contact extends React.Component  {
           <h1 className="section-header">Contact Me</h1>
           <div className="me"></div>
           <ContactModalContainer unToggle={this.unToggle} toggle={this.toggle} selected={this.state.selected}/>
-          <div className="contact-info">
-            <div onClick={() => {this.toggle('linkedin', 'click')}} onPointerLeave={() => {this.unToggle('linkedin', 'hover')}} onPointerEnter={() => {this.toggle('linkedin', 'hover')}} className="linkedin link"></div>
-            <div onClick={() => {this.toggle('github', 'click')}} onPointerLeave={() => {this.unToggle('github', 'hover')}} onPointerEnter={() => {this.toggle('github', 'hover')}} className="github link"></div>
-            <div onClick={() => {this.toggle('mail', 'click')}} onPointerLeave={() => {this.unToggle('mail', 'hover')}} onPointerEnter={() => {this.toggle('mail', 'hover')}} className="mail link"></div>
-            <div onClick={() => {this.toggle('phone', 'click')}} onPointerLeave={() => {this.unToggle('phone', 'hover')}} onPointerEnter={() => {this.toggle('phone', 'hover')}} className="phone link"></div>
-          </div>
+          <ContactLinks unToggle={this.unToggle} toggle={this.toggle} selected={this.state.selected}/>
         </div>
       </section>
     );
