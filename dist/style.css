@@ -663,12 +663,8 @@ div:hover, button:hover, div:active, button:active {
 }
 
 .project-selector>* {
-  margin: 1em;
-  font-size: 1.2em;
-}
-
-.selector {
   color: white;
+  margin: 1em;
   font-size: 1.2em;
 }
 
