@@ -33,10 +33,16 @@ class contact extends React.Component  {
     const items = ['linkedin', 'github', 'mail', 'phone']
     let selected = this.state.selected;
     items.forEach(item => {
+      // window.getComputedStyle(document.documentElement).getPropertyValue(`--${item}`);
+      let cssVal = window.getComputedStyle(document.documentElement).getPropertyValue(`--${item}`);
       if (item === selected){
-        document.documentElement.style.setProperty(`--${item}`, `url(${item}-hover.png)`)
+        if (cssVal !== `url(${item}-hover.png)`) {
+          document.documentElement.style.setProperty(`--${item}`, `url(${item}-hover.png)`)
+        }
       } else {
-        document.documentElement.style.setProperty(`--${item}`, `url(${item}.png)`)
+        if (cssVal !== `url(${item}.png)`) {
+          document.documentElement.style.setProperty(`--${item}`, `url(${item}.png)`)
+        }
       }
     })
   }
