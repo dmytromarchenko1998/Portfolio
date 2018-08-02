@@ -121,6 +121,7 @@ button, input[type="submit"], input[type="reset"] {
   --me-size: 10em;
   --copy-icon-padding: 1.5em;
   --technology: 1.5em;
+  --selector-font: 1.2em;
 }
 
 /*----------Main----------*/
@@ -663,7 +664,7 @@ div:hover, button:hover, div:active, button:active {
 .project-selector>* {
   color: white;
   margin: 1em;
-  font-size: 1.2em;
+  font-size: var(--selector-font);
 }
 
 .technology.zaget {
