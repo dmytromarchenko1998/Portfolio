@@ -1,0 +1,32 @@
+const skills = [
+  {name:`ReactJS`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`AngularJS`, projects:[]},
+  {name:`MongoDB`, projects:['foodees', 'gottago']},
+  {name:`Docker`, projects:['foodees']},
+  {name:`JavaScript`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`PostgreSQL`, projects:['zaget']},
+  {name:`Apollo`, projects:[]},
+  {name:`MomentJS`, projects:['foodees', 'gottago']},
+  {name:`jQuery`, projects:['foodees', 'gottago']},
+  {name:`UnderscoreJS`, projects:[]},
+  {name:`Flexbox`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`Mongoose`, projects:['foodees', 'gottago']},
+  {name:`Axios`, projects:['zaget', 'gottago']},
+  {name:`GraphQL`, projects:[]},
+  {name:`Amazon EC2`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`Amazon S3`, projects:['foodees', 'zaget']},
+  {name:`Jest`, projects:['zaget', 'foodees']},
+  {name:`BackboneJS`, projects:[]},
+  {name:`Enzyme`, projects:['zaget','foodees']},
+  {name:`Redux`, projects:[]},
+  {name:`Prisma`, projects:[]},
+  {name:`HTML/CSS`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`Webpack`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`Node`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`Express`, projects:['foodees', 'zaget', 'gottago']},
+  {name:`Redis`, projects:['zaget']},
+  {name:`Amazon RDS`, projects:['zaget']},
+  {name: `Google Places Api`, projects:['gottago']}
+];
+
+module.exports = skills;

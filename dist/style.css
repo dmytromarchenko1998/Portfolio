@@ -524,24 +524,6 @@ div:hover, button:hover, div:active, button:active {
   background-position: right top;
 }
 
-/*.copyIcon.hover {
-  background: url(copy-hover.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.copyIcon.link {
-  background: url(copy.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1000;
-}*/
-
-/*.copyIcon.link:focus {
-  opacity: .7;
-}*/
-
 /*----------Projects----------*/
 
 #projects {
@@ -655,8 +637,71 @@ div:hover, button:hover, div:active, button:active {
   align-items: stretch;
   background-color: rgba(25, 24, 26, .95);
   box-shadow: 0px 0px 9px black;
-  height: 80vh;
 }
+
+.technology-list {
+  margin: 1em 5em 5em 5em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technology {
+  color: rgba(25, 24, 26, .95);
+  border-radius: 5em;
+  font-size: 1.5em;
+  background-color: white;
+  padding: .3em 1em .3em 1em;
+  margin: .5em;
+}
+
+/*----------Project Selector----------*/
+
+.project-selector {
+  display: flex;
+  justify-content: center;
+  margin: 0 5em 0 5em;
+}
+
+.project-selector>* {
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+.selector {
+  color: white;
+  font-size: 1.2em;
+}
+
+.technology.zaget {
+  background-color: #96002e;
+  box-shadow: 0 0 .5em .2em #96002e;
+}
+
+.selector.zaget.selected {
+  color: #96002e;
+  text-shadow: 0 0 .2em #96002e, 0 0 .4em #96002e, 0 0 1em #96002e;
+}
+
+.technology.foodees {
+  background-color: #c41200;
+  box-shadow: 0 0 .5em .2em #c41200;
+}
+
+.selector.foodees.selected {
+  color: #c41200;
+  text-shadow: 0 0 .2em #c41200, 0 0 .4em #c41200, 0 0 1em #c41200;
+}  
+
+.technology.gottago {
+  background-color: #66fffb;
+  box-shadow: 0 0 .5em .2em #66fffb;
+}
+
+.selector.gottago.selected {
+  color: #66fffb;
+  text-shadow: 0 0 .2em #66fffb, 0 0 .4em #66fffb, 0 0 1em #66fffb;
+}
+
 
 
 
