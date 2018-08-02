@@ -15,6 +15,7 @@ class App extends Component {
       size: 'regular'
     }
     this.resize = this.resize.bind(this);
+    this.resize();
   }
 
   componentDidMount() {
