@@ -59,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar format={this.state.format}/>
+        <NavBar format={this.state.format} size={this.state.size}/>
         <Cover />
         <ProjectsList format={this.state.format}/>
         <Technologies />
