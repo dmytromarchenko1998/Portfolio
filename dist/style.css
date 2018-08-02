@@ -120,13 +120,11 @@ button, input[type="submit"], input[type="reset"] {
   --link-size: 4em;
   --me-size: 10em;
   --copy-icon-padding: 1.5em;
+  --technology: 1.5em;
 }
 
 /*----------Main----------*/
 
-#app {
-  
-}
 
 #app>div {
   display: flex;
@@ -648,7 +646,7 @@ div:hover, button:hover, div:active, button:active {
 .technology {
   color: rgba(25, 24, 26, .95);
   border-radius: 5em;
-  font-size: 1.5em;
+  font-size: var(--technology);
   background-color: white;
   padding: .3em 1em .3em 1em;
   margin: .5em;
