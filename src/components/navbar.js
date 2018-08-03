@@ -11,6 +11,11 @@ class NavBar extends Component {
     }
     this.toggleNav = this.toggleNav.bind(this);
     this.scrollTo = this.scrollTo.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.closeModal);
   }
 
   scrollTo(section) {
@@ -25,6 +30,10 @@ class NavBar extends Component {
     } else {
       this.setState({expanded:true});
     }
+  }
+
+  closeModal() {
+    this.setState({expanded:false});
   }
 
   render() {
