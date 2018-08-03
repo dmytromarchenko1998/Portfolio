@@ -379,13 +379,14 @@ div.expanded-nav>.first {
 .about-body {
   display: flex;
   flex-flow: column;
-  align-items: center;
   padding: 0em 5em 0em 5em;
   font-size: 1em;
 }
 
 .about-body>p {
   font-weight: 100;
+  text-align: left;
+  margin: .5em 0 .5em 0;
 }
 
 .me {
@@ -668,8 +669,7 @@ div:hover, button:hover, div:active, button:active {
 }
 
 .technology.zaget {
-  background-color: #96002e;
-  box-shadow: 0 0 .5em .2em #96002e;
+  box-shadow: 0 0 .4em .3em #96002e;
 }
 
 .selector.zaget.selected {
@@ -678,8 +678,7 @@ div:hover, button:hover, div:active, button:active {
 }
 
 .technology.foodees {
-  background-color: #c41200;
-  box-shadow: 0 0 .5em .2em #c41200;
+  box-shadow: 0 0 .5em .3em #c41200;
 }
 
 .selector.foodees.selected {
@@ -688,7 +687,6 @@ div:hover, button:hover, div:active, button:active {
 }  
 
 .technology.gottago {
-  background-color: #66fffb;
   box-shadow: 0 0 .5em .2em #66fffb;
 }
 
