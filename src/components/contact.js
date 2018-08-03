@@ -34,7 +34,7 @@ class contact extends React.Component  {
 
   closeModal() {
     let lastScrollY = window.scrollY;
-    if (Math.abs(lastScrollY - this.state.lastPositon) > 500) {
+    if (Math.abs(lastScrollY - this.state.lastPositon) > 700) {
       this.setState({selected:'none', type:'none'});
     }
   }
