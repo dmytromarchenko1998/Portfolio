@@ -7,7 +7,8 @@ class NavBar extends Component {
     super(props)
     smoothscroll.polyfill();
     this.state = {
-      expanded: false
+      expanded: false,
+      lastPositon:undefined
     }
     this.toggleNav = this.toggleNav.bind(this);
     this.scrollTo = this.scrollTo.bind(this);
@@ -16,6 +17,9 @@ class NavBar extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.closeModal);
+    setInterval(()=> {
+      this.setState({lastPositon:window.scrollY})
+    }, 500);
   }
 
   scrollTo(section) {
@@ -33,7 +37,10 @@ class NavBar extends Component {
   }
 
   closeModal() {
-    this.setState({expanded:false});
+    let lastScrollY = window.scrollY;
+    if (Math.abs(lastScrollY - this.state.lastPositon) > 100) {
+      this.setState({expanded:false});
+    }
   }
 
   render() {

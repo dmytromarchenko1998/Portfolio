@@ -9,7 +9,8 @@ class projectsList extends React.Component {
     super(props);
     this.state = {
       selected: 'none',
-      type: 'click'
+      type: 'click',
+      lastPositon:undefined
     }
     this.toggle = this.toggle.bind(this);
     this.unToggle = this.unToggle.bind(this);
@@ -18,6 +19,9 @@ class projectsList extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.closeModal);
+    setInterval(()=> {
+      this.setState({lastPositon:window.scrollY})
+    }, 500);
   }
 
   toggle(project, type) {
@@ -39,7 +43,10 @@ class projectsList extends React.Component {
   }
 
   closeModal() {
-    this.setState({selected:'none', type:'none'});
+    let lastScrollY = window.scrollY;
+    if (Math.abs(lastScrollY - this.state.lastPositon) > 100) {
+      this.setState({selected:'none', type:'none'});
+    }
   }
 
   render() {
