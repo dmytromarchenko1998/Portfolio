@@ -13,6 +13,11 @@ class projectsList extends React.Component {
     }
     this.toggle = this.toggle.bind(this);
     this.unToggle = this.unToggle.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.closeModal);
   }
 
   toggle(project, type) {
@@ -31,6 +36,10 @@ class projectsList extends React.Component {
         this.setState({selected:'none', type: type})
       }
     }
+  }
+
+  closeModal() {
+    this.setState({selected:'none', type:'none'});
   }
 
   render() {
