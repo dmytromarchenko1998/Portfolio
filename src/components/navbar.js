@@ -38,7 +38,7 @@ class NavBar extends Component {
 
   closeModal() {
     let lastScrollY = window.scrollY;
-    if (Math.abs(lastScrollY - this.state.lastPositon) > 100) {
+    if (Math.abs(lastScrollY - this.state.lastPositon) > 500) {
       this.setState({expanded:false});
     }
   }

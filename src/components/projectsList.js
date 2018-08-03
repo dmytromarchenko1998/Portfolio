@@ -44,7 +44,7 @@ class projectsList extends React.Component {
 
   closeModal() {
     let lastScrollY = window.scrollY;
-    if (Math.abs(lastScrollY - this.state.lastPositon) > 100) {
+    if (Math.abs(lastScrollY - this.state.lastPositon) > 500) {
       this.setState({selected:'none', type:'none'});
     }
   }
