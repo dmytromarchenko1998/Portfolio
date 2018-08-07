@@ -22,7 +22,7 @@ class contact extends React.Component  {
   componentDidMount() {
     window.addEventListener('scroll', this.closeModal);
     document.getElementsByClassName("about-body")[0].addEventListener("click", () => {
-      this.closeModal();
+      this.setState({selected:'none', type:'none'});
     });
     setInterval(()=> {
       this.setState({lastPositon:window.scrollY})
