@@ -26,8 +26,7 @@ const project = ({ projectData, toggle, unToggle, selected, type, }) => {
   } else {
     return (
       <div id={projectData.id} onPointerEnter={() => {toggle(projectData.id, 'hover')}} onClick={() => {toggle(projectData.id, 'click')}} className={`project cover`}>
-        <div className="blur layer"><div className="gradient layer"></div></div>
-        <h4>{projectName}</h4>
+        <div className="layer"></div>
       </div>
     )
   }

@@ -136,7 +136,7 @@ button, input[type="submit"], input[type="reset"] {
 
 body {
   margin: 0em;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
 }
 
 .layer {
@@ -153,8 +153,6 @@ body {
 
 .gradient {
   background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8));
-  margin: .04em;
-  border: .04em solid rgba(25, 24, 26, 1);
 }
 
 /*----------Preload----------*/
@@ -572,8 +570,8 @@ div:hover, button:hover, div:active, button:active {
   z-index: 99;
 }
 
-#foodees>.blur {
-  background: url(foodeesmain.jpg);
+#foodees>.layer {
+  background: url(foodeesCover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -583,8 +581,8 @@ div:hover, button:hover, div:active, button:active {
   background: linear-gradient(to bottom, rgba(196, 18, 0), rgba(169, 33, 3));
 }
 
-#zaget>.blur {
-  background: url(zaget.jpg);
+#zaget>.layer {
+  background: url(zagetCover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -594,8 +592,8 @@ div:hover, button:hover, div:active, button:active {
   background: linear-gradient(to bottom, rgba(168, 35, 59, 1), rgba(142, 27, 44));
 }
 
-#gottago>.blur {
-  background: url(gottagomodalhours.jpg);
+#gottago>.layer {
+  background: url(gottagoCover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -609,7 +607,7 @@ div:hover, button:hover, div:active, button:active {
   color: rgba(25, 24, 26);
 }
 
-.project>.blur>.gradient, .project>.blur {
+.project>.layer>.gradient, .project>.layer {
   position: absolute;
   z-index: 1;
   width: var(--project-size);
