@@ -1,7 +1,7 @@
 import React from 'react';
 import ClipboardJS from 'clipboard';
 
-const ContactModalContainer = ({ selected, toggle, unToggle }) => {
+const ContactModalContainer = ({ selected, toggle, unToggle, openAlertModal }) => {
   new ClipboardJS('.copyIcon');
 
   if (selected === 'none') {
@@ -16,7 +16,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle }) => {
           <div className="line">
             <h2>Link:</h2>
             <a href="https://www.linkedin.com/in/dmytro-marchenko/" target="_blank" id="linkedinLink" value="linkedin.com/in/dmytro-marchenko" >linkedin.com/in/dmytro-marchenko/</a>
-            <div className="copy-container" ><button data-clipboard-target="#linkedinLink" className="copyIcon link"></button></div>
+            <div className="copy-container" ><button onClick={(data) => {openAlertModal(data)}} data-clipboard-target="#linkedinLink" className="copyIcon link"></button></div>
           </div>
         </div>
       </div>
@@ -28,12 +28,12 @@ const ContactModalContainer = ({ selected, toggle, unToggle }) => {
           <div className="line">
             <h2>Username: </h2>
             <a href="https://github.com/dmytromarchenko1998" target="_blank" id="githubName" value="dmytromarchenko1998" >dmytromarchenko1998</a>
-            <div className="copy-container" ><button data-clipboard-target="#githubName" className="copyIcon link"></button></div>
+            <div className="copy-container" ><button onClick={(data) => {openAlertModal(data)}} data-clipboard-target="#githubName" className="copyIcon link"></button></div>
           </div>
           <div className="line">
             <h2>Link: </h2>
             <a href="https://github.com/dmytromarchenko1998" target="_blank" id="githubLink" value="github.com/dmytromarchenko1998" >github.com/dmytromarchenko1998</a>
-            <div className="copy-container" ><button data-clipboard-target="#githubLink" className="copyIcon link"></button></div>
+            <div className="copy-container" ><button onClick={(data) => {openAlertModal(data)}} data-clipboard-target="#githubLink" className="copyIcon link"></button></div>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle }) => {
           <div className="line">
             <h2>Email: </h2>
             <a href="mailto:dmytromarchenko1998@gmail.com" id="emailLink" value="dmytromarchenko1998@gmail.com">dmytromarchenko1998@gmail.com</a>
-            <div className="copy-container" ><button data-clipboard-target="#emailLink"className="copyIcon link"></button></div>
+            <div className="copy-container" ><button onClick={(data) => {openAlertModal(data)}} data-clipboard-target="#emailLink"className="copyIcon link"></button></div>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle }) => {
           <div className="line">
             <h2>Mobile: </h2>
             <a href="tel:925-457-1925" id="phoneLink" value="925-457-1925">925-457-1925</a>
-            <div className="copy-container" ><button data-clipboard-target="#phoneLink" className="copyIcon link"></button></div>  
+            <div className="copy-container" ><button onClick={(data) => {openAlertModal(data)}} data-clipboard-target="#phoneLink" className="copyIcon link"></button></div>  
           </div>
         </div>
       </div>

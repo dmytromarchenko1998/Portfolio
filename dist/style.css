@@ -159,7 +159,7 @@ body {
 /*----------Preload----------*/
 
 #preload {
-  background: url(phone-hover.png) no-repeat -9999px -9999px, url(github-hover.png) no-repeat -9999px -9999px, url(mail-hover.png) no-repeat -9999px -9999px, url(phone-hover.png) no-repeat -9999px -9999px;
+  background: url(copydual.png) no-repeat -9999px -9999px, url(linkedindual.png) no-repeat -9999px -9999px, url(maildual.png) no-repeat -9999px -9999px, url(phonedual.png) no-repeat -9999px -9999px, url(githubdual.png) no-repeat -9999px -9999px;
 }
 
 /*----------Section Header----------*/
@@ -692,6 +692,27 @@ div:hover, button:hover, div:active, button:active {
 .selector.gottago.selected {
   color: #66fffb;
   text-shadow: 0 0 .2em #66fffb, 0 0 .4em #66fffb, 0 0 1em #66fffb;
+}
+
+/*----------Alert Modal----------*/
+
+#alertmodalcontainer {
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  justify-content: flex-start;
+  bottom: 0%;
+  left: 0%;
+  z-index: 999;
+}
+
+.alertmodal {
+  border-radius: .5em;
+  font-size: 1em;
+  padding: .5em 1em .5em 1em;
+  margin: .5em .5em .5em .5em;
+  background-color: white;
+  color: rgba(25, 24, 26);
 }
 
 
