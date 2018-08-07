@@ -21,6 +21,9 @@ class contact extends React.Component  {
 
   componentDidMount() {
     window.addEventListener('scroll', this.closeModal);
+    document.getElementsByClassName("about-body")[0].addEventListener("click", () => {
+      this.closeModal();
+    });
     setInterval(()=> {
       this.setState({lastPositon:window.scrollY})
     }, 500);
