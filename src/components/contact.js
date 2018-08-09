@@ -53,8 +53,8 @@ class contact extends React.Component  {
   }
 
   openAlertModal(item) {
-    const data = item.target.parentNode.previousSibling.getAttribute('value');
-    this.setState({alertModal:{type:'copy', data:`${data} has been copied`}});
+    // const data = item.target.parentNode.previousSibling.getAttribute('value');
+    this.setState({alertModal:{type:'copy', data:`${'test'} has been copied`}});
     setTimeout(this.closeAlertModal, 1500);
   }
 
