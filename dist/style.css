@@ -531,7 +531,6 @@ div:active, button:active {
   max-width: 100vw;
   display: flex;
   align-items: center;
-  min-height: 100vh;
 }
 
 .projects-container {
