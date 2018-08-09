@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectModal from './projectModal';
 
 const project = ({ projectData, toggle, unToggle, selected, type, }) => {
 
@@ -16,10 +17,8 @@ const project = ({ projectData, toggle, unToggle, selected, type, }) => {
       )
     } else if (type === 'click'){
       return (
-        <div id={projectData.id} onPointerLeave={() => {unToggle(projectData.id, 'hover')}} onPointerEnter={() => {toggle(projectData.id, 'hover')}} onClick={() => {toggle(projectData.id, 'click')}} className={`project`}>
-          <div>
-            <div><h4>selected</h4></div>
-          </div>
+        <div id={projectData.id} className={`project`}>
+          <ProjectModal projectData={projectData} toggle={toggle} />
         </div>
       )
     }

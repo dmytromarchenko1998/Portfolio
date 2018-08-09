@@ -172,6 +172,7 @@ body {
 
 /*----------NavBar----------*/
 .navbar {
+  background-color: rgba(25, 24, 26, .98);
   position: fixed;
   display: flex;
   width: 100vw;
@@ -230,15 +231,14 @@ div.expanded-nav>.first {
 /*----------NavContent----------*/
 
 .nav {
-  background-color: rgba(25, 24, 26, .98);
   flex-grow: 1;
   justify-content: center;
 }
 
-.nav:hover {
+/*.nav:hover {
   transition: all .3s;
   background-color: rgba(50, 50, 50,1);
-}
+}*/
 
 .nav:active {
   background-color: rgba(100, 100, 100, 1);
@@ -252,7 +252,7 @@ div.expanded-nav>.first {
 }
 
 .name {
-  background-color: rgba(25, 24, 26, .98);
+  /*background-color: rgba(25, 24, 26, .98);*/
   flex-grow: 6;
 }
 
@@ -519,7 +519,7 @@ div.expanded-nav>.first {
   padding: 0em;
 }
 
-div:hover, button:hover, div:active, button:active {
+div:active, button:active {
   background-position: right top;
 }
 
@@ -617,6 +617,81 @@ div:hover, button:hover, div:active, button:active {
   max-height: 80vw;
 }
 
+/*----------Project Modal----------*/
+
+#projectmodal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.modalPagination>span:active {
+  text-shadow: 0 0 .1em black;
+}
+
+#projectmodal.zaget {
+  color: #bd0038;
+}
+
+.zaget>.projectmodalcontainer {
+  box-shadow: 0 0 .4em .3em black;
+}
+
+#projectmodal.gottago {
+  color: #66fcf1;
+}
+
+.gottago>.projectmodalcontainer {
+  box-shadow: 0 0 .4em .3em black;
+}
+
+#projectmodal.foodees {
+  color: #d42222;
+}
+
+.foodees>.projectmodalcontainer {
+  box-shadow: 0 0 .4em .3em black;
+}
+
+.projectmodalcontainer {
+  display: flex;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.closemodal {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 99;
+}
+
+.closemodal>p {
+  font-size: var(--section-header-size);
+  margin: 0 .2em -1em 0;
+  z-index: 99;
+}
+
+.modalPagination {
+  font-size: var(--section-header-size);
+  flex-grow: 1;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
+.modalPagination :first-child {
+  display: inline-flex;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.modalPagination>* {
+  margin: .3em;
+}
+
 /*----------Technologies----------*/
 
 #technologies {
@@ -668,12 +743,12 @@ div:hover, button:hover, div:active, button:active {
 }
 
 .technology.zaget {
-  box-shadow: 0 0 .4em .3em #96002e;
+  box-shadow: 0 0 .4em .3em #bd0038;
 }
 
 .selector.zaget.selected {
   color: #96002e;
-  text-shadow: 0 0 .2em #ab223b, 0 0 .4em #ab223b, 0 0 1em #ab223b;
+  text-shadow: 0 0 .2em #bd0038, 0 0 .4em #bd0038, 0 0 1em #bd0038;
 }
 
 .technology.foodees {
