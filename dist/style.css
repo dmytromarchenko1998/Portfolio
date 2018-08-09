@@ -235,11 +235,6 @@ div.expanded-nav>.first {
   justify-content: center;
 }
 
-/*.nav:hover {
-  transition: all .3s;
-  background-color: rgba(50, 50, 50,1);
-}*/
-
 .nav:active {
   background-color: rgba(100, 100, 100, 1);
 }
@@ -784,10 +779,14 @@ div:active, button:active {
 
 .alertmodal {
   border-radius: .5em;
-  font-size: 1em;
   padding: .5em 1em .5em 1em;
   margin: .5em .5em .5em .5em;
   background-color: white;
+}
+
+.alertmodal>p {
+  font-size: 1em;
+  font-weight: bolder;
   color: rgba(25, 24, 26);
 }
 
