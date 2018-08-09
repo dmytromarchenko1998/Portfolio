@@ -784,7 +784,7 @@ div:active, button:active {
   background-color: white;
 }
 
-.alertmodal>p {
+p#alertmodaltext {
   font-size: 1em;
   font-weight: bolder;
   color: rgba(25, 24, 26);

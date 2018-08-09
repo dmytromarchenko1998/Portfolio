@@ -7,7 +7,7 @@ const AlertModal = ({type,data}) => {
     return (
       <div id="alertmodalcontainer">
         <div className="alertmodal">
-          <p>{data}</p>
+          <p id="alertmodaltext">{data}</p>
         </div>
       </div>
     )
