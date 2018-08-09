@@ -54,7 +54,7 @@ class projectsList extends React.Component {
       <section id="projects">
         <div className="projects-container">
           <div>
-            <h1 className="section-header">Projects</h1>
+            <h1 id="projectsheader" className="section-header">Projects</h1>
           </div>
           <div className="project-list">
             {projects.map(project => <Project type={this.state.type} toggle={this.toggle} unToggle={this.unToggle} selected={this.state.selected} projectData={project}/>)}

@@ -4,7 +4,7 @@ import Contact from './contact';
 const about = ({ format }) => (
   <section id="about">
     <div className="about-container">
-      <h1 className="section-header">About Me</h1>
+      <h1 id="aboutheader"className="section-header">About Me</h1>
       <div className="about-body">
         <p>I'm a javascript developer with experience across the full stack.</p>
         <p>For the Front End, I specialize in using ReactJS but have some experience with other frameworks such as AngularJS and Backbone along with Apollo and Redux for global state management. If you have a design in mind, I can turn that into a working product with a quick turnaround.</p>

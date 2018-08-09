@@ -17,7 +17,6 @@ class technologies extends Component {
 
   toggleTech (project) {
     this.setState({selected:project}, this.updateSelector);
-    // console.log(document.getElementsByClassName(`selector ${project}`)[0].classList.toggle('selected'));
   }
 
   updateSelector () {
@@ -29,14 +28,13 @@ class technologies extends Component {
         classList.remove('selected');
       }
     })
-    // document.getElementsByClassName(`selector ${this.state.selected}`)[0].classList.toggle('selected');
   }
 
   render() {
     return (
       <section id="technologies">
         <div className="technologies-container">
-          <h1 className="section-header">Technologies</h1>
+          <h1 id="technologiesheader" className="section-header">Technologies</h1>
           <div className="project-selector">
             <div className="selector zaget" onClick={() => {this.toggleTech('zaget')}}>Zaget</div>
             <div className="selector gottago" onClick={() => {this.toggleTech('gottago')}}>Gotta Go</div>

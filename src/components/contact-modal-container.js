@@ -11,7 +11,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle, openAlertModal }) =
     );
   } else if (selected === 'linkedin') {
     return (
-      <div onPointerLeave={() => {unToggle('linkedin', 'hover')}} onPointerEnter={() => {toggle('linkedin', 'hover')}} className="modal-container">
+      <div onMouseLeave={() => {unToggle('linkedin', 'hover')}} onMouseEnter={() => {toggle('linkedin', 'hover')}} className="modal-container">
         <div id="linkedin" className="link-modal">
           <div className="line">
             <h2>Link:</h2>
@@ -23,7 +23,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle, openAlertModal }) =
     )
   } else if (selected === 'github') {
     return (
-      <div onPointerLeave={() => {unToggle('github', 'hover')}} onPointerEnter={() => {toggle('github', 'hover')}} className="modal-container">
+      <div onMouseLeave={() => {unToggle('github', 'hover')}} onMouseEnter={() => {toggle('github', 'hover')}} className="modal-container">
         <div id="github" className="link-modal">
           <div className="line">
             <h2>Username: </h2>
@@ -40,7 +40,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle, openAlertModal }) =
     )
   } else if (selected === 'mail') {
     return (
-      <div onPointerLeave={() => {unToggle('mail', 'hover')}} onPointerEnter={() => {toggle('mail', 'hover')}} className="modal-container">
+      <div onMouseLeave={() => {unToggle('mail', 'hover')}} onMouseEnter={() => {toggle('mail', 'hover')}} className="modal-container">
         <div id="mail" className="link-modal">
           <div className="line">
             <h2>Email: </h2>
@@ -52,7 +52,7 @@ const ContactModalContainer = ({ selected, toggle, unToggle, openAlertModal }) =
     )
   } else if (selected === 'phone') {
     return (
-      <div onPointerLeave={() => {unToggle('phone', 'hover')}} onPointerEnter={() => {toggle('phone', 'hover')}} className="modal-container">
+      <div onMouseLeave={() => {unToggle('phone', 'hover')}} onMouseEnter={() => {toggle('phone', 'hover')}} className="modal-container">
         <div id="phone" className="link-modal">
           <div className="line">
             <h2>Mobile: </h2>

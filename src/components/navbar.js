@@ -49,9 +49,9 @@ class NavBar extends Component {
         <nav className="navbar">
           <li className="name"><h1>Dmytro</h1><h1>Marchenko</h1></li>
           <li onClick={() => {this.scrollTo('#cover')}} className="nav item"><a>Home</a></li>
-          <li onClick={() => {this.scrollTo('#projects')}} className="nav item"><a>Projects</a></li>
-          <li onClick={() => {this.scrollTo('#technologiesfiller')}} className="nav item"><a>Technologies</a></li>
-          <li onClick={() => {this.scrollTo('#aboutfiller')}} className="nav item"><a>About</a></li>
+          <li onClick={() => {this.scrollTo('#projectsheader')}} className="nav item"><a>Projects</a></li>
+          <li onClick={() => {this.scrollTo('#technologiesheader')}} className="nav item"><a>Technologies</a></li>
+          <li onClick={() => {this.scrollTo('#aboutheader')}} className="nav item"><a>About</a></li>
           <li onClick={() => {this.scrollTo('#contact')}} className="nav item"><a>Contact Me</a></li>
         </nav>
       )

@@ -574,10 +574,6 @@ div:active, button:active {
   background-position: center;
 }
 
-#foodees.viewmore {
-  background: linear-gradient(to bottom, rgba(196, 18, 0), rgba(169, 33, 3));
-}
-
 #zaget>.layer {
   background: url(zagetCover.jpg);
   background-repeat: no-repeat;
@@ -585,23 +581,11 @@ div:active, button:active {
   background-position: center;
 }
 
-#zaget.viewmore {
-  background: linear-gradient(to bottom, rgba(168, 35, 59, 1), rgba(142, 27, 44));
-}
-
 #gottago>.layer {
   background: url(gottagoCover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-#gottago.viewmore {
-  background: linear-gradient(to bottom, rgba(98, 218, 214), rgba(89, 197, 194));
-}
-
-#gottago.viewmore {
-  color: rgba(25, 24, 26);
 }
 
 .project>.layer>.gradient, .project>.layer {
@@ -779,15 +763,11 @@ div:active, button:active {
 
 .alertmodal {
   border-radius: .5em;
+  font-size: 1em;
   padding: .5em 1em .5em 1em;
   margin: .5em .5em .5em .5em;
   background-color: white;
-}
-
-p#alertmodaltext {
-  font-size: 1em;
-  font-weight: bolder;
-  color: rgba(25, 24, 26);
+  color: rgba(25, 24, 26, 1);
 }
 
 /*----------Filler----------*/

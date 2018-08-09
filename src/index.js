@@ -5,7 +5,6 @@ import NavBar from './components/navbar';
 import About from './components/about';
 import ProjectsList from './components/projectsList';
 import Technologies from './components/technologies';
-import Filler from './components/filler';
 
 class App extends Component {
 
@@ -70,9 +69,7 @@ class App extends Component {
         <NavBar format={this.state.format} size={this.state.size}/>
         <Cover />
         <ProjectsList format={this.state.format}/>
-        <Filler name="technologies"/>
         <Technologies />
-        <Filler name="about"/>
         <About format={this.state.format}/>
       </div>
     )
