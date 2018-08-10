@@ -135,6 +135,9 @@ button, input[type="submit"], input[type="reset"] {
   align-items: center;
 }
 
+span::selection, a::selection { color: none; }
+
+
 body {
   margin: 0em;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
@@ -177,7 +180,7 @@ body {
   display: flex;
   width: 100vw;
   z-index: 999;
-  height: 6em;
+  height: var(--link-size);
 }
 
 .navbar >* {
@@ -672,6 +675,16 @@ div:active, button:active {
   margin: .3em;
 }
 
+.modalPagination>p {
+  font-size: 1em;
+}
+
+/*----------Project Data----------*/
+
+.projectData {
+  color: rgb(25 24 26);
+}
+
 /*----------Technologies----------*/
 
 #technologies {
@@ -771,12 +784,6 @@ div:active, button:active {
 }
 
 /*----------Filler----------*/
-
-.filler {
-  height: 10vh;
-  margin-top: 45vh;
-  margin-bottom: -40vh;
-}
 
 
 

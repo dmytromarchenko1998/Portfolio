@@ -1,7 +1,7 @@
 import React from 'react';
 import Project from './project';
 
-const projects = [{id:'zaget'},{id:'gottago'},{id:'foodees'}];
+const projects = [{id:'zaget', pages:[['idk', 'dawg'], ['hope', 'this'], ['works']]}, {id:'gottago', pages:[]},{id:'foodees', pages:[]}];
 
 class projectsList extends React.Component {
 
