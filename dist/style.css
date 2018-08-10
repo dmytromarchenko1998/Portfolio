@@ -251,7 +251,6 @@ div.expanded-nav>.first {
 }
 
 .name {
-  /*background-color: rgba(25, 24, 26, .98);*/
   flex-grow: 6;
 }
 
@@ -519,9 +518,9 @@ div.expanded-nav>.first {
   padding: 0em;
 }
 
-div:active, button:active {
+/*div:active, button:active {
   background-position: right top;
-}
+}*/
 
 /*----------Projects----------*/
 

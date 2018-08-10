@@ -19,7 +19,6 @@ class ProjectModal extends Component {
       let newPage = curPage - 1;
       this.setState({page:newPage})
     }
-    // console.log(this.props.projectData[this.state.page]);
   }
 
   render() { 
