@@ -698,12 +698,12 @@ div:active, button:active {
 }
 
 .projectData>p {
+  font-size: var(--project-data-font);
   font-weight: 100;
   /*box-shadow: 0 0 1em .01em black;*/
   /*background-color: rgba(25, 24, 26, .98);*/
   margin: 1.5em 1.2em 1.2em 1.2em;
   padding: .5em;
-  font-size: var(--project-data-font);
   color: rgb(35, 31, 37);
 }
 
