@@ -136,6 +136,10 @@ button, input[type="submit"], input[type="reset"] {
   align-items: center;
 }
 
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 span::selection, a::selection { color: none; }
 
 
@@ -518,9 +522,9 @@ div.expanded-nav>.first {
   padding: 0em;
 }
 
-/*div:active, button:active {
+div:active, button:active {
   background-position: right top;
-}*/
+}
 
 /*----------Projects----------*/
 
