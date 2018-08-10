@@ -31,9 +31,9 @@ class ProjectModal extends Component {
         <div className="projectmodalcontainer">
           <ProjectData pageData={this.props.projectData.pages[this.state.page]}/>
           <div className="modalPagination">
-            <span onClick={()=>{this.changePage('prev')}}>&#9654;</span>
+            <span onClick={()=>{this.changePage('prev')}}>&#9658;</span>
             <p>{this.state.page + 1}</p>
-            <span onClick={()=>{this.changePage('next')}}>&#9654;</span>
+            <span onClick={()=>{this.changePage('next')}}>&#9658;</span>
           </div>
         </div>
       </section>
