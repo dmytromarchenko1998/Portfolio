@@ -54,7 +54,7 @@ class App extends Component {
       styleProps[7] = {name:'--technology', value: '1.5em'};
       styleProps[8] = {name:'--selector-font', value:'1.2em'};
       styleProps[9] = {name:'--about-body-font', value: '1em'};
-      styleProps[10] = {name:'--project-data-font', value: '2em'};
+      styleProps[10] = {name:'--project-data-font', value: '1.5em'};
       if (windowWidth < 650) {
         size = 'skinny';
       }
