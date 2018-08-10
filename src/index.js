@@ -40,7 +40,7 @@ class App extends Component {
       styleProps[6] = {name:'--copy-icon-padding', value: '3em'};
       styleProps[7] = {name:'--technology', value: '2em'};
       styleProps[8] = {name:'--selector-font', value:'2em'};
-      styleProps[9] = {name:'--about-body-font', value: '2em'};
+      styleProps[9] = {name:'--about-body-font', value: '3em'};
       this.setState({format:'mobile'});
     } else { //desktop sizing
       let size = 'regular';
