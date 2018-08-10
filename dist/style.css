@@ -123,6 +123,7 @@ button, input[type="submit"], input[type="reset"] {
   --technology: 1.5em;
   --selector-font: 1.2em;
   --about-body-font: 1em;
+  --project-data-font: 1.5em;
 }
 
 /*----------Main----------*/
@@ -603,6 +604,7 @@ div:active, button:active {
 /*----------Project Modal----------*/
 
 #projectmodal {
+  /*font-weight: 100;*/
   width: 100%;
   height: 100%;
   display: flex;
@@ -613,20 +615,20 @@ div:active, button:active {
   text-shadow: 0 0 .1em black;
 }
 
-#projectmodal.zaget {
+/*#projectmodal.zaget {
   color: #bd0038;
+}*/
+
+.zaget>.projectmodalcontainer.projectData>p {
+  /*background-color: #bd0038;*/
 }
 
-.zaget>.projectmodalcontainer {
-  box-shadow: 0 0 .4em .3em black;
-}
-
-#projectmodal.gottago {
+/*#projectmodal.gottago {
   color: #66fcf1;
 }
 
 .gottago>.projectmodalcontainer {
-  box-shadow: 0 0 .4em .3em black;
+  background-color: #66fcf1;
 }
 
 #projectmodal.foodees {
@@ -634,22 +636,27 @@ div:active, button:active {
 }
 
 .foodees>.projectmodalcontainer {
-  box-shadow: 0 0 .4em .3em black;
+  background-color: #d42222;
 }
-
+*/
 .projectmodalcontainer {
+  background-color: white;
+  color: rgb(35, 31, 37);
+  flex-flow: column;
   display: flex;
   flex-grow: 1;
-  background-color: white;
 }
 
 .closemodal {
+  color: rgb(35, 31, 37);
+  font-weight: 100;
   display: flex;
   justify-content: flex-end;
   z-index: 99;
 }
 
 .closemodal>p {
+  font-weight: 100;
   font-size: var(--section-header-size);
   margin: 0 .2em -1em 0;
   z-index: 99;
@@ -657,10 +664,10 @@ div:active, button:active {
 
 .modalPagination {
   font-size: var(--section-header-size);
-  flex-grow: 1;
-  align-self: flex-end;
+  align-self: stretch;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .modalPagination :first-child {
@@ -672,17 +679,32 @@ div:active, button:active {
 }
 
 .modalPagination>* {
+  font-weight: 100;
   margin: .3em;
 }
 
-.modalPagination>p {
+#projectmodal>.projectmodalcontainer>.modalPagination>p {
+  color: rgb(35, 31, 37);
   font-size: 1em;
 }
 
 /*----------Project Data----------*/
 
+.projectData {
+  flex-grow: 1;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .projectData>p {
-  color: rgb(25, 24, 26);
+  font-weight: 100;
+  /*box-shadow: 0 0 1em .01em black;*/
+  /*background-color: rgba(25, 24, 26, .98);*/
+  margin: 1.5em 1.2em 1.2em 1.2em;
+  padding: .5em;
+  font-size: var(--project-data-font);
+  color: rgb(35, 31, 37);
 }
 
 /*----------Technologies----------*/
