@@ -681,8 +681,8 @@ div:active, button:active {
 
 /*----------Project Data----------*/
 
-.projectData {
-  color: rgb(25 24 26);
+.projectData>p {
+  color: rgb(25, 24, 26);
 }
 
 /*----------Technologies----------*/
