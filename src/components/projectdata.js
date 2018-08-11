@@ -3,8 +3,8 @@ import React from 'react';
 const ProjectData = ({ pageData }) => {
   const checkImage = (image) => {
     if (image !== undefined) {
-      document.documentElement.style.setProperty('--project-image', `url(${image})`);
-      return <div className="project-image"></div>
+      // document.documentElement.style.setProperty('--project-image', `url(${image})`);
+      return <div style={{backgroundImage:`url(${image})`}} className="project-image"></div>
     } else {
       return null;
     }

@@ -717,7 +717,7 @@ div:active, button:active {
 .project-image {
   flex-grow: 1;
   box-shadow: 0 0 1em .01em grey;
-  background: var(--project-image);
+  /*background: var(--project-image);*/
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
