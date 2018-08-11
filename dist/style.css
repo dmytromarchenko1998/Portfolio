@@ -124,6 +124,7 @@ button, input[type="submit"], input[type="reset"] {
   --selector-font: 1.2em;
   --about-body-font: 1em;
   --project-data-font: 1.5em;
+  --project-image: none;
 }
 
 /*----------Main----------*/
@@ -697,7 +698,9 @@ div:active, button:active {
   flex-grow: 1;
   min-width: 100%;
   display: flex;
-  align-items: center;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .projectData>p {
@@ -705,9 +708,20 @@ div:active, button:active {
   font-weight: 100;
   /*box-shadow: 0 0 1em .01em black;*/
   /*background-color: rgba(25, 24, 26, .98);*/
-  margin: 1.5em 1.2em 1.2em 1.2em;
-  padding: .5em;
+  margin: 1.5em 1.2em .5em 1.2em;
   color: rgb(35, 31, 37);
+}
+
+/*----------Project Image----------*/
+
+.project-image {
+  flex-grow: 1;
+  box-shadow: 0 0 1em .01em grey;
+  background: var(--project-image);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 2em 1.2em 1em 1.2em;
 }
 
 /*----------Technologies----------*/
