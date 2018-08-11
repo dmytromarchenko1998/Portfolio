@@ -6,7 +6,7 @@ const randomNum = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
-const colors = ['#66fcf1', '#45a29e', '#ff6a2f', '#d81440', '#d32323']
+const colors = ['#00fff9', '#ffed00', '#ff0000', '#ff7e00', '#00ed00']
 
 for (let i = 0; i < 10; i+=1) {
   let styling = {
